@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS documents (
     file_name TEXT,
     chunk_id INT,
     content TEXT,
-    embedding VECTOR(348)
+    embedding VECTOR(384)
 );
