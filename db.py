@@ -8,6 +8,7 @@ engine: Engine = create_engine(PG_URI)
 
 def insert_chunk(file_name, chunk_id, content, embedding):
     # convert to Python list to pass to pgvector via SQLAlchemy
+    print(f'Inserting chunk {chunk_id} of file {file_name} into database.') 
     emb_list = embedding.tolist()
     with engine.begin() as conn:
         conn.execute(text("""
